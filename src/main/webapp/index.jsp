@@ -82,11 +82,11 @@ Navigation Bar Section
 		  <div class="nav-collapse">
 			<ul class="nav">
 			  <li class="active"><a href="index.jsp">Home	</a></li>
-			  <li class=""><a href="list-view.html">List View</a></li>
-			  <li class=""><a href="grid-view.html">Grid View</a></li>
-			  <li class=""><a href="three-col.html">Three Column</a></li>
-			  <li class=""><a href="four-col.html">Four Column</a></li>
-			  <li class=""><a href="general.html">General Content</a></li>
+			  <li class=""><a href="#">Page 1</a></li>
+			  <li class=""><a href="#">Page 2</a></li>
+			  <li class=""><a href="#">Page 3</a></li>
+			  <li class=""><a href="#">Page 4</a></li>
+			  <li class=""><a href="#">Page 5</a></li>
 			</ul>
 			<form action="#" class="navbar-search pull-left">
 			  <input type="text" placeholder="Search" class="search-query span2">
@@ -124,25 +124,20 @@ Body Section
 <div id="sidebar" class="span3">
 <div class="well well-small">
 	<ul class="nav nav-list">
-		<li><a href="products.html"><span class="icon-chevron-right"></span>Fashion</a></li>
-		<li><a href="products.html"><span class="icon-chevron-right"></span>Watches</a></li>
-		<li><a href="products.html"><span class="icon-chevron-right"></span>Fine Jewelry</a></li>
-		<li><a href="products.html"><span class="icon-chevron-right"></span>Fashion Jewelry</a></li>
-		<li><a href="products.html"><span class="icon-chevron-right"></span>Engagement and Wedding</a></li>
-		<li><a href="products.html"><span class="icon-chevron-right"></span>Men's Jewelry</a></li>
-		<li><a href="products.html"><span class="icon-chevron-right"></span>Vintage and Antique</a></li>
-		<li><a href="products.html"><span class="icon-chevron-right"></span>Loose Diamonds </a></li>
-		<li><a href="products.html"><span class="icon-chevron-right"></span>Loose Beads</a></li>
-		<li><a href="products.html"><span class="icon-chevron-right"></span>See All Jewelry and Watches</a></li>
+		<li><a href="products.html"><span class="icon-chevron-right"></span>Category 1</a></li>
+		<li><a href="products.html"><span class="icon-chevron-right"></span>Category 2</a></li>
+		<li><a href="products.html"><span class="icon-chevron-right"></span>Category 3</a></li>
+		<li><a href="products.html"><span class="icon-chevron-right"></span>Category 4</a></li>
+		<li><a href="products.html"><span class="icon-chevron-right"></span>Category 5</a></li>
 		<li style="border:0"> &nbsp;</li>
 		<li> <a class="totalInCart" href="cart.html"><strong>Total Amount  <span class="badge badge-warning pull-right" style="line-height:18px;">$0.00</span></strong></a></li>
 	</ul>
 </div>
 
 			  <div class="well well-small alert alert-warning cntr">
-				  <h2>50% Discount</h2>
+				  <h2>Test Pane Here!</h2>
 				  <p> 
-					 only valid for online order. <br><br><a class="defaultBtn" href="#">Click here </a>
+					 To add some sales etc. <br><br><a class="defaultBtn" href="#">Click here </a>
 				  </p>
 			  </div>
 			  <div class="well well-small" ><a href="#"><img src="images/paypal.jpg" alt="payment method paypal"></a></div>
@@ -171,29 +166,29 @@ Body Section
 			  <div class="item">
                 <img style="width:100%" src="images/bootstrap_free-ecommerce.png" alt="bootstrap ecommerce templates">
                 <div class="carousel-caption">
-                      <h4>Bootstrap shopping cart</h4>
-                      <p><span>Very clean simple to use</span></p>
+                      <h4>Sample Product layer</h4>
+                      <p><span>Product or sale info</span></p>
                 </div>
               </div>
 			  <div class="item">
                 <img style="width:100%" src="images/carousel1.png" alt="bootstrap ecommerce templates">
                 <div class="carousel-caption">
-                      <h4>Bootstrap Ecommerce template</h4>
-                      <p><span>Highly Google seo friendly</span></p>
+                      <h4>Sample Product layer 2</h4>
+                      <p><span>Info again...</span></p>
                 </div>
               </div>
 			  <div class="item active">
                 <img style="width:100%" src="images/carousel3.png" alt="bootstrap ecommerce templates">
                 <div class="carousel-caption">
-                      <h4>Twitter Bootstrap cart</h4>
-                      <p><span>Very easy to integrate and expand.</span></p>
+                      <h4>Sample Product layer 3</h4>
+                      <p><span>More info...</span></p>
                 </div>
               </div>
               <div class="item">
                 <img style="width:100%" src="images/bootstrap-templates.png" alt="bootstrap templates">
                 <div class="carousel-caption">
-                      <h4>Bootstrap templates integration</h4>
-                      <p><span>Compitable to many more opensource cart</span></p>
+                      <h4>Sample Product layer 4</h4>
+                      <p><span>More and more info...</span></p>
                 </div>
               </div>
             </div>
@@ -282,7 +277,7 @@ New Products
 				<a class="zoomTool" href="product_details.html" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
 				<a href="product_details.html"><img src="images/b.jpg" alt=""></a>
 				<div class="caption cntr">
-					<p>Manicure and Pedicure</p>
+					<p>Product category</p>
 					<p><strong> $22.00</strong></p>
 					<h4><a class="shopBtn" href="#" title="add to cart"> Add to cart </a></h4>
 					<div class="actionList">
@@ -298,7 +293,7 @@ New Products
 				<a class="zoomTool" href="product_details.html" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
 				<a href="product_details.html"><img src="images/c.jpg" alt=""></a>
 				<div class="caption cntr">
-					<p>Manicure and Pedicure</p>
+					<p>Product category</p>
 					<p><strong> $22.00</strong></p>
 					<h4><a class="shopBtn" href="#" title="add to cart"> Add to cart </a></h4>
 					<div class="actionList">
@@ -314,7 +309,7 @@ New Products
 				<a class="zoomTool" href="product_details.html" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
 				<a href="product_details.html"><img src="images/a.jpg" alt=""></a>
 				<div class="caption cntr">
-					<p>Manicure and Pedicure</p>
+					<p>Product category</p>
 					<p><strong> $22.00</strong></p>
 					<h4><a class="shopBtn" href="#" title="add to cart"> Add to cart </a></h4>
 					<div class="actionList">
@@ -341,7 +336,7 @@ New Products
 				<a class="zoomTool" href="product_details.html" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
 				<a  href="product_details.html"><img src="images/d.jpg" alt=""></a>
 				<div class="caption">
-				  <h5>Manicure and Pedicure</h5>
+				  <h5>Product category</h5>
 				  <h4>
 					  <a class="defaultBtn" href="product_details.html" title="Click to view"><span class="icon-zoom-in"></span></a>
 					  <a class="shopBtn" href="#" title="add to cart"><span class="icon-plus"></span></a>
@@ -355,7 +350,7 @@ New Products
 				<a class="zoomTool" href="product_details.html" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
 				<a  href="product_details.html"><img src="images/e.jpg" alt=""></a>
 				<div class="caption">
-				  <h5>Manicure and Pedicure</h5>
+				  <h5>Product category</h5>
 				  <h4>
 					  <a class="defaultBtn" href="product_details.html" title="Click to view"><span class="icon-zoom-in"></span></a>
 					  <a class="shopBtn" href="#" title="add to cart"><span class="icon-plus"></span></a>
@@ -369,7 +364,7 @@ New Products
 				<a class="zoomTool" href="product_details.html" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
 				<a  href="product_details.html"><img src="images/f.jpg" alt=""/></a>
 				<div class="caption">
-				  <h5>Manicure and Pedicure</h5>
+				  <h5>Product category</h5>
 				  <h4>
 					  <a class="defaultBtn" href="product_details.html" title="Click to view"><span class="icon-zoom-in"></span></a>
 					  <a class="shopBtn" href="#" title="add to cart"><span class="icon-plus"></span></a>
@@ -436,7 +431,7 @@ Footer
 <a href="#">ORDER HISTORY</a><br>
  </div>
 <div class="span2">
-<h5>Iinformation</h5>
+<h5>Information</h5>
 <a href="contact.html">CONTACT</a><br>
 <a href="#">SITEMAP</a><br>
 <a href="#">LEGAL NOTICE</a><br>

@@ -34,14 +34,19 @@ public class ProductController extends HttpServlet {
 		System.out.println(name);
 		Integer stock = Integer.parseInt(request.getParameter("stock"));
 		System.out.println(stock);
+		Integer seller_id = Integer.parseInt(request.getParameter("userid"));
+		System.out.println(seller_id);
 		
 		Product product = new Product();
 		product.setProduct_name(name);
 		product.setProduct_stock(stock);
-		System.out.println(name + " " + stock);
+		product.setSeller_id(seller_id);
+		System.out.println(name + " " + stock + " " + seller_id);
 		
 		DataProvider dp = new DataProvider();
 		dp.writeData(product);
+		
+		response.sendRedirect("http://localhost:8080/RegistrationLogin/jsp/welcome.jsp");
 		
 	}
 

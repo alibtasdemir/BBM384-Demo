@@ -81,12 +81,12 @@ Navigation Bar Section
 		  </a>
 		  <div class="nav-collapse">
 			<ul class="nav">
-			  <li class=""><a href="../index.jsp">Home	</a></li>
-			  <li class=""><a href="list-view.html">List View</a></li>
-			  <li class=""><a href="grid-view.html">Grid View</a></li>
-			  <li class=""><a href="three-col.html">Three Column</a></li>
-			  <li class=""><a href="four-col.html">Four Column</a></li>
-			  <li class=""><a href="general.html">General Content</a></li>
+			  <li class="active"><a href="index.jsp">Home	</a></li>
+			  <li class=""><a href="#">Page 1</a></li>
+			  <li class=""><a href="#">Page 2</a></li>
+			  <li class=""><a href="#">Page 3</a></li>
+			  <li class=""><a href="#">Page 4</a></li>
+			  <li class=""><a href="#">Page 5</a></li>
 			</ul>
 			<form action="#" class="navbar-search pull-left">
 			  <input type="text" placeholder="Search" class="search-query span2">
@@ -416,7 +416,7 @@ Footer
 <a href="#">ORDER HISTORY</a><br>
  </div>
 <div class="span2">
-<h5>Iinformation</h5>
+<h5>Information</h5>
 <a href="contact.html">CONTACT</a><br>
 <a href="#">SITEMAP</a><br>
 <a href="#">LEGAL NOTICE</a><br>
@@ -451,7 +451,7 @@ accompanied by English versions from the 1914 translation by H. Rackham.
 		<a href="#"><img src="../images/visa.png" alt="payment"></a>
 		<a href="#"><img src="../images/disc.png" alt="payment"></a>
 	</p>
-	<span>Copyright &copy; 2013<br> bootstrap ecommerce shopping template</span>
+	<span>Copyright &copy; 2019<br> E-commerce shopping template</span>
 </div>
 </div>
 <a href="#" class="gotop"><i class="icon-double-angle-up"></i></a>

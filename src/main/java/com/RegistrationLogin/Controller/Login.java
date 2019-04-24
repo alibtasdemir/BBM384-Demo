@@ -44,12 +44,16 @@ public class Login extends HttpServlet {
 		
 		DataProvider dp = new DataProvider();
 		String result = dp.readData(user);
+		int user_id = dp.getId(user);
+		
 		if (result.equalsIgnoreCase("success")) {
 			HttpSession session = request.getSession();
 			session.setAttribute("email", email);
+			session.setAttribute("id", user_id);
 			response.sendRedirect("http://localhost:8080/RegistrationLogin/jsp/welcome.jsp");
 		}
 		else {
+			response.sendRedirect("http://localhost:8080/RegistrationLogin/index.jsp");
 			out.println("\nwrong username or password");
 		}
 	}

@@ -81,37 +81,16 @@ Navigation Bar Section
 		  </a>
 		  <div class="nav-collapse">
 			<ul class="nav">
-			  <li class=""><a href="../index.jsp">Home	</a></li>
-			  <li class=""><a href="list-view.html">List View</a></li>
-			  <li class=""><a href="grid-view.html">Grid View</a></li>
-			  <li class=""><a href="three-col.html">Three Column</a></li>
-			  <li class=""><a href="four-col.html">Four Column</a></li>
-			  <li class=""><a href="general.html">General Content</a></li>
+			  <li class="active"><a href="index.jsp">Home	</a></li>
+			  <li class=""><a href="#">Page 1</a></li>
+			  <li class=""><a href="#">Page 2</a></li>
+			  <li class=""><a href="#">Page 3</a></li>
+			  <li class=""><a href="#">Page 4</a></li>
+			  <li class=""><a href="#">Page 5</a></li>
 			</ul>
 			<form action="#" class="navbar-search pull-left">
 			  <input type="text" placeholder="Search" class="search-query span2">
 			</form>
-			<ul class="nav pull-right">
-			<li class="dropdown">
-				<a data-toggle="dropdown" class="dropdown-toggle" href="#"><span class="icon-lock"></span> Login <b class="caret"></b></a>
-				<div class="dropdown-menu">
-				<form class="form-horizontal loginFrm" action="http://localhost:8080/RegistrationLogin/Login">
-				  <div class="control-group">
-					Email: <input type="email" class="span2" id="inputEmail" name="email" placeholder="Email">
-				  </div>
-				  <div class="control-group">
-					Password: <input type="password" name="password" class="span2" id="inputPassword" placeholder="Password">
-				  </div>
-				  <div class="control-group">
-					<label class="checkbox">
-					<input type="checkbox"> Remember me
-					</label>
-					<button type="submit" class="shopBtn btn-block">Sign in</button>
-				  </div>
-				</form>
-				</div>
-			</li>
-			</ul>
 		  </div>
 		</div>
 	  </div>
@@ -124,25 +103,20 @@ Body Section
 <div id="sidebar" class="span3">
 <div class="well well-small">
 	<ul class="nav nav-list">
-		<li><a href="products.html"><span class="icon-chevron-right"></span>Fashion</a></li>
-		<li><a href="products.html"><span class="icon-chevron-right"></span>Watches</a></li>
-		<li><a href="products.html"><span class="icon-chevron-right"></span>Fine Jewelry</a></li>
-		<li><a href="products.html"><span class="icon-chevron-right"></span>Fashion Jewelry</a></li>
-		<li><a href="products.html"><span class="icon-chevron-right"></span>Engagement and Wedding</a></li>
-		<li><a href="products.html"><span class="icon-chevron-right"></span>Men's Jewelry</a></li>
-		<li><a href="products.html"><span class="icon-chevron-right"></span>Vintage and Antique</a></li>
-		<li><a href="products.html"><span class="icon-chevron-right"></span>Loose Diamonds </a></li>
-		<li><a href="products.html"><span class="icon-chevron-right"></span>Loose Beads</a></li>
-		<li><a href="products.html"><span class="icon-chevron-right"></span>See All Jewelry and Watches</a></li>
+		<li><a href="products.html"><span class="icon-chevron-right"></span>Category 1</a></li>
+		<li><a href="products.html"><span class="icon-chevron-right"></span>Category 2</a></li>
+		<li><a href="products.html"><span class="icon-chevron-right"></span>Category 3</a></li>
+		<li><a href="products.html"><span class="icon-chevron-right"></span>Category 4</a></li>
+		<li><a href="products.html"><span class="icon-chevron-right"></span>Category 5</a></li>
 		<li style="border:0"> &nbsp;</li>
-		<li> <a class="totalInCart" href="cart.html"><strong>Total Amount  <span class="badge badge-warning pull-right" style="line-height:18px;">$448.42</span></strong></a></li>
+		<li> <a class="totalInCart" href="cart.html"><strong>Total Amount  <span class="badge badge-warning pull-right" style="line-height:18px;">$0.00</span></strong></a></li>
 	</ul>
 </div>
 
 			  <div class="well well-small alert alert-warning cntr">
-				  <h2>50% Discount</h2>
+				  <h2>Test Pane Here!</h2>
 				  <p> 
-					 only valid for online order. <br><br><a class="defaultBtn" href="#">Click here </a>
+					 To add some sales etc. <br><br><a class="defaultBtn" href="#">Click here </a>
 				  </p>
 			  </div>
 			  <div class="well well-small" ><a href="#"><img src="../images/paypal.jpg" alt="payment method paypal"></a></div>
@@ -164,13 +138,13 @@ Body Section
 		  </ul>
 		  </div>
 	<div class="span9">
-	<%String email = (String)session.getAttribute("email");%>
+	<%String email = (String)session.getAttribute("email");Integer id = (Integer)session.getAttribute("id");%>
 
-	<h3>Welcome <% out.println(email); %></h3>
+	<h3>Welcome <% out.println(email + "\n" + id); %></h3>
 	<hr class="soft"/>
 	
 	<div class="well">
-	<form class="form-horizontal" action="http://localhost:8080/RegistrationLogin/ProductController">
+	<form class="form-horizontal" action="http://localhost:8080/RegistrationLogin/ProductController?">
 		<h3>Add Product</h3>
 		
 		<!-- Name -->
@@ -184,6 +158,7 @@ Body Section
 			<label class="control-label" for="inputLname">Stock </label>
 			<div class="controls">
 			  <input type="text" id="inputLname" placeholder="Stock number(Quantity)" name="stock">
+			  <input type="hidden" name="userid" value=<%= id %>>
 			</div>
 		 </div>
 		 	
@@ -244,7 +219,7 @@ Footer
 <a href="#">ORDER HISTORY</a><br>
  </div>
 <div class="span2">
-<h5>Iinformation</h5>
+<h5>Information</h5>
 <a href="contact.html">CONTACT</a><br>
 <a href="#">SITEMAP</a><br>
 <a href="#">LEGAL NOTICE</a><br>
@@ -279,7 +254,7 @@ accompanied by English versions from the 1914 translation by H. Rackham.
 		<a href="#"><img src="../images/visa.png" alt="payment"></a>
 		<a href="#"><img src="../images/disc.png" alt="payment"></a>
 	</p>
-	<span>Copyright &copy; 2013<br> bootstrap ecommerce shopping template</span>
+	<span>Copyright &copy; 2019<br> E-commerce shopping template</span>
 </div>
 </div>
 <a href="#" class="gotop"><i class="icon-double-angle-up"></i></a>

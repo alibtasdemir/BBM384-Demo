@@ -4,6 +4,7 @@ public class Product {
 
 	private String product_name;
 	private int product_stock;
+	private int seller_id;
 	
 	
 	public Product() {
@@ -20,6 +21,12 @@ public class Product {
 	}
 	public void setProduct_stock(int product_stock) {
 		this.product_stock = product_stock;
+	}
+	public int getSeller_id() {
+		return seller_id;
+	}
+	public void setSeller_id(int seller_id) {
+		this.seller_id = seller_id;
 	}
 	
 	

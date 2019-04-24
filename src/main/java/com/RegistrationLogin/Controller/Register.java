@@ -55,7 +55,7 @@ public class Register extends HttpServlet {
 		if (result.equalsIgnoreCase("success")) {
 			HttpSession session = request.getSession();
 			session.setAttribute("email", email);
-			response.sendRedirect("http://localhost:8080/RegistrationLogin/welcome.jsp");
+			response.sendRedirect("http://localhost:8080/RegistrationLogin/jsp/welcome.jsp");
 		}
 		else {
 			out.println("\nwrong username or password");

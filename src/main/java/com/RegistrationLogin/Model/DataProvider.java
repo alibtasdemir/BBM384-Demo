@@ -35,7 +35,7 @@ public class DataProvider {
 		
 		try {
 			Statement stmt = con.createStatement();
-			stmt.executeUpdate("insert into product(name, stock) values('"+product.getProduct_name()+"', '"+product.getProduct_stock()+"')");
+			stmt.executeUpdate("insert into product(name, stock, seller) values('"+product.getProduct_name()+"', '"+product.getProduct_stock()+"', '"+product.getSeller_id()+"')");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -70,7 +70,7 @@ public class DataProvider {
 		
 	}
 	
-	public String readDate(Product product) {
+	public String readData(Product product) {
 		
 		MyDb db = new MyDb();
 		
@@ -93,6 +93,29 @@ public class DataProvider {
 		return result;
 		
 		
+	}
+	
+	public int getId(User user) {
+		MyDb db = new MyDb();
+		
+		Connection con = db.getCon();
+		
+		try {
+			Statement stmt = con.createStatement();
+			ResultSet rs = stmt.executeQuery("select id from user where email='"+user.getEmail()+"'");
+			
+			if (rs.next()) {
+				int id = rs.getInt("id");
+				return id;
+			}
+			else {
+				return -1;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return -1;
 	}
 	
 }
