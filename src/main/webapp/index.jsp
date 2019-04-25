@@ -30,7 +30,7 @@
 					<a href="#"><span class="icon-tumblr"></span></a>
 				</div>
 				<a class="active" href="index.jsp"> <span class="icon-home"></span> Home</a> 
-				<a href="#"><span class="icon-user"></span> My Account</a> 
+				<a href="jsp/welcome.jsp"><span class="icon-user"></span> My Account</a> 
 				<a href="jsp/register.jsp"><span class="icon-edit"></span> Free Register </a> 
 				<a href="contact.html"><span class="icon-envelope"></span> Contact us</a>
 			</div>
@@ -50,10 +50,11 @@ Lower Header Section
 	<div class="span4">
 	<h1>
 	<a class="logo" href="index.jsp"><span>Test Template</span> 
-		<img src="images/logo-bootstrap-shoping-cart.png" alt="Test Template">
+		<img alt="Test Template" src="images/new_logo.png">
 	</a>
 	</h1>
 	</div>
+	<!-- 
 	<div class="span4">
 	<div class="offerNoteWrapper">
 	<h1 class="dotmark">
@@ -62,6 +63,7 @@ Lower Header Section
 	</h1>
 	</div>
 	</div>
+	 -->
 	<div class="span4 alignR">
 	<p><br> <strong> Support (24/7) :  XXXX XXX XX XX</strong><br><br></p>
 	</div>
@@ -391,6 +393,7 @@ New Products
 <!-- 
 Clients 
 -->
+<!-- 
 <section class="our_client">
 	<hr class="soften"/>
 	<h4 class="title cntr"><span class="text">Manufactures</span></h4>
@@ -415,11 +418,13 @@ Clients
 			<a href="#"><img alt="" src="images/6.png"></a>
 		</div>
 	</div>
-</section>
+</section> -->
 
 <!--
 Footer
 -->
+<hr class="soften"/>
+<hr class="soften"/>
 <footer class="footer">
 <div class="row-fluid">
 <div class="span2">
@@ -447,11 +452,8 @@ Footer
 <a href="#">SUPPLIERS</a> <br/>
  </div>
  <div class="span6">
-<h5>The standard chunk of Lorem</h5>
-The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for
- those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et 
- Malorum" by Cicero are also reproduced in their exact original form, 
-accompanied by English versions from the 1914 translation by H. Rackham.
+<h5>Information about website.</h5>
+There will be some text.
  </div>
  </div>
 </footer>

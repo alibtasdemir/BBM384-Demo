@@ -32,7 +32,7 @@
 					<a href="#"><span class="icon-tumblr"></span></a>
 				</div>
 				<a href="../index.jsp"> <span class="icon-home"></span> Home</a> 
-				<a href="#"><span class="icon-user"></span> My Account</a> 
+				<a href="welcome.jsp"><span class="icon-user"></span> My Account</a> 
 				<a class="active"  href="jsp/register.jsp"><span class="icon-edit"></span> Free Register </a> 
 				<a href="contact.html"><span class="icon-envelope"></span> Contact us</a>
 			</div>
@@ -50,10 +50,11 @@ Lower Header Section
 	<div class="span4">
 	<h1>
 	<a class="logo" href="../index.jsp"><span>Test Template</span> 
-		<img src="../images/logo-bootstrap-shoping-cart.png" alt="bootstrap sexy shop">
+		<img alt="Test Template" src="../images/new_logo.png">
 	</a>
 	</h1>
 	</div>
+	<!-- 
 	<div class="span4">
 	<div class="offerNoteWrapper">
 	<h1 class="dotmark">
@@ -62,6 +63,7 @@ Lower Header Section
 	</h1>
 	</div>
 	</div>
+	 -->
 	<div class="span4 alignR">
 	<p><br> <strong> Support (24/7) :  XXXX XXX XX XX</strong><br><br></p>
 	</div>
@@ -124,25 +126,20 @@ Body Section
 <div id="sidebar" class="span3">
 <div class="well well-small">
 	<ul class="nav nav-list">
-		<li><a href="products.html"><span class="icon-chevron-right"></span>Fashion</a></li>
-		<li><a href="products.html"><span class="icon-chevron-right"></span>Watches</a></li>
-		<li><a href="products.html"><span class="icon-chevron-right"></span>Fine Jewelry</a></li>
-		<li><a href="products.html"><span class="icon-chevron-right"></span>Fashion Jewelry</a></li>
-		<li><a href="products.html"><span class="icon-chevron-right"></span>Engagement and Wedding</a></li>
-		<li><a href="products.html"><span class="icon-chevron-right"></span>Men's Jewelry</a></li>
-		<li><a href="products.html"><span class="icon-chevron-right"></span>Vintage and Antique</a></li>
-		<li><a href="products.html"><span class="icon-chevron-right"></span>Loose Diamonds </a></li>
-		<li><a href="products.html"><span class="icon-chevron-right"></span>Loose Beads</a></li>
-		<li><a href="products.html"><span class="icon-chevron-right"></span>See All Jewelry and Watches</a></li>
+		<li><a href="products.html"><span class="icon-chevron-right"></span>Category 1</a></li>
+		<li><a href="products.html"><span class="icon-chevron-right"></span>Category 2</a></li>
+		<li><a href="products.html"><span class="icon-chevron-right"></span>Category 3</a></li>
+		<li><a href="products.html"><span class="icon-chevron-right"></span>Category 4</a></li>
+		<li><a href="products.html"><span class="icon-chevron-right"></span>Category 5</a></li>
 		<li style="border:0"> &nbsp;</li>
-		<li> <a class="totalInCart" href="cart.html"><strong>Total Amount  <span class="badge badge-warning pull-right" style="line-height:18px;">$448.42</span></strong></a></li>
+		<li> <a class="totalInCart" href="cart.html"><strong>Total Amount  <span class="badge badge-warning pull-right" style="line-height:18px;">$0.00</span></strong></a></li>
 	</ul>
 </div>
 
 			  <div class="well well-small alert alert-warning cntr">
-				  <h2>50% Discount</h2>
+				  <h2>Test Pane Here!</h2>
 				  <p> 
-					 only valid for online order. <br><br><a class="defaultBtn" href="#">Click here </a>
+					 To add some sales etc. <br><br><a class="defaultBtn" href="#">Click here </a>
 				  </p>
 			  </div>
 			  <div class="well well-small" ><a href="#"><img src="../images/paypal.jpg" alt="payment method paypal"></a></div>
@@ -217,7 +214,7 @@ Body Section
 	  </div>
 	  <!-- Date of Birth -->
 		<div class="control-group">
-		<label class="control-label">Date of Birth <sup>*</sup></label>
+		<label class="control-label">Date of Birth </label>
 		<div class="controls">
 		  <select class="span1" name="days">
 				<option value="">-</option>
@@ -340,34 +337,34 @@ Body Section
 
 <div class="well">
 	<form class="form-horizontal" >
-		<h3>Your Billing Details</h3>
+		<h3>Your Billing Details (Under Construction)</h3>
 		<div class="control-group">
 			<label class="control-label">Field1 <sup>*</sup></label>
 			<div class="controls">
-			  <input type="text" placeholder=" Field name">
+			  <input type="text" placeholder=" Field name" disabled>
 			</div>
 		</div>
 		<div class="control-group">
 			<label class="control-label">Field2 <sup>*</sup></label>
 			<div class="controls">
-			  <input type="text" placeholder=" Field name">
+			  <input type="text" placeholder=" Field name" disabled>
 			</div>
 		</div>
 		 <div class="control-group">
 			<label class="control-label">Field3 <sup>*</sup></label>
 			<div class="controls">
-			  <input type="text" placeholder=" Field name">
+			  <input type="text" placeholder=" Field name" disabled>
 			</div>
 		</div>
 		<div class="control-group">
 			<label class="control-label">Field4 <sup>*</sup></label>
 			<div class="controls">
-			  <textarea></textarea>
+			  <textarea disabled></textarea>
 			</div>
 		</div>
 	<div class="control-group">
 		<div class="controls">
-		 <input type="submit" name="submitAccount" value="Register" class="shopBtn exclusive">
+		 <input type="submit" name="submitAccount" value="Register" class="shopBtn exclusive" disabled>
 		</div>
 	</div>
 	</form>
@@ -376,6 +373,7 @@ Body Section
 </div>
 </div>
 
+<!--  
 <section class="our_client">
 	<hr class="soften"/>
 	<h4 class="title cntr"><span class="text">Manufactures</span></h4>
@@ -400,11 +398,13 @@ Body Section
 			<a href="#"><img alt="" src="../images/6.png"></a>
 		</div>
 	</div>
-</section>
+</section>-->
 
 <!--
 Footer
 -->
+<hr class="soften"/>
+<hr class="soften"/>
 <footer class="footer">
 <div class="row-fluid">
 <div class="span2">
@@ -432,11 +432,8 @@ Footer
 <a href="#">SUPPLIERS</a> <br/>
  </div>
  <div class="span6">
-<h5>The standard chunk of Lorem</h5>
-The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for
- those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et 
- Malorum" by Cicero are also reproduced in their exact original form, 
-accompanied by English versions from the 1914 translation by H. Rackham.
+<h5>Information about website.</h5>
+There will be some text.
  </div>
  </div>
 </footer>

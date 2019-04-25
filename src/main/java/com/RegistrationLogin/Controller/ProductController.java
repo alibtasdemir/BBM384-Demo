@@ -1,10 +1,13 @@
 package com.RegistrationLogin.Controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.RegistrationLogin.Bean.Product;
 import com.RegistrationLogin.Model.DataProvider;
@@ -31,20 +34,20 @@ public class ProductController extends HttpServlet {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 		
 		String name = request.getParameter("name");
-		System.out.println(name);
 		Integer stock = Integer.parseInt(request.getParameter("stock"));
-		System.out.println(stock);
 		Integer seller_id = Integer.parseInt(request.getParameter("userid"));
-		System.out.println(seller_id);
 		
 		Product product = new Product();
 		product.setProduct_name(name);
 		product.setProduct_stock(stock);
 		product.setSeller_id(seller_id);
-		System.out.println(name + " " + stock + " " + seller_id);
 		
 		DataProvider dp = new DataProvider();
 		dp.writeData(product);
+		ArrayList<Product> products = dp.getProductsBySellerId(seller_id);
+		
+		HttpSession session = request.getSession();
+		session.setAttribute("myProducts", products);
 		
 		response.sendRedirect("http://localhost:8080/RegistrationLogin/jsp/welcome.jsp");
 		

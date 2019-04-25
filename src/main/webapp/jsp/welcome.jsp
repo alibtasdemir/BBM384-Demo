@@ -1,7 +1,7 @@
 <%@page import="com.RegistrationLogin.Bean.Product"%>
 <%@page import="java.util.ArrayList"%>
 <%@page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,8 +34,8 @@
 					<a href="#"><span class="icon-tumblr"></span></a>
 				</div>
 				<a href="../index.jsp"> <span class="icon-home"></span> Home</a> 
-				<a href="#"><span class="icon-user"></span> My Account</a> 
-				<a class="active"  href="jsp/register.jsp"><span class="icon-edit"></span> Free Register </a> 
+				<a class="active" href="#"><span class="icon-user"></span> My Account</a> 
+				<a href="register.jsp"><span class="icon-edit"></span> Free Register </a> 
 				<a href="contact.html"><span class="icon-envelope"></span> Contact us</a>
 			</div>
 		</div>
@@ -52,10 +52,11 @@ Lower Header Section
 	<div class="span4">
 	<h1>
 	<a class="logo" href="../index.jsp"><span>Test Template</span> 
-		<img src="../images/logo-bootstrap-shoping-cart.png" alt="bootstrap sexy shop">
+		<img alt="Test Template" src="../images/new_logo.png">
 	</a>
 	</h1>
 	</div>
+	<!-- 
 	<div class="span4">
 	<div class="offerNoteWrapper">
 	<h1 class="dotmark">
@@ -63,7 +64,8 @@ Lower Header Section
 	E-Commerce
 	</h1>
 	</div>
-	</div>
+	</div> -->
+	
 	<div class="span4 alignR">
 	<p><br> <strong> Support (24/7) :  XXXX XXX XX XX</strong><br><br></p>
 	</div>
@@ -143,13 +145,14 @@ Body Section
 	<%
 	String email = (String)session.getAttribute("email");
 	Integer id = (Integer)session.getAttribute("id");
-	ArrayList<Product> myProducts =(ArrayList<Product>)session.getAttribute("myProducts");
+	ArrayList<Product> myProducts =(ArrayList<Product>) session.getAttribute("myProducts");
 	%>
-
-	<h3>Welcome 
+	
+	<h3>Welcome
 	<% 
-	out.println(email + "\n" + id);
+	out.println(email + "\n"); 
 	%></h3>
+	
 	<hr class="soft"/>
 	
 	<div class="well">
@@ -178,33 +181,33 @@ Body Section
 			</div>
 		</div>
 	</form>
-	
-	<div>
+	<button type="button" value="Logout" onclick="window.location.href = '../logout.jsp';" class="shopBtn"><span class="glyphicon glyphicon-log-out"></span> Logout</button>
+</div>
+
+<div class="well">
         <h4>List of products</h4>
-        <table border="1" cellpadding="5" align="center">
+        <table class="table table-striped table-borderless">
+            <thead>
             <tr>
-                <th>Name</th>
-                <th>Stock</th>
+                <th scope="col">Name</th>
+                <th scope="col">Stock</th>
             </tr>
+            </thead>
+            <tbody>
             <% for (Product product: myProducts) { %>
                 <tr>
                     <td><%=product.getProduct_name()%></td>
                     <td><%=product.getProduct_stock()%></td>
                 </tr>
             <%}%>
-        </table>
-    </div>
-	
-	<button type="button" value="Logout" onclick="window.location.href = '../logout.jsp';" class="shopBtn"><span class="glyphicon glyphicon-log-out"></span> Logout</button>
-</div>
-
-<div class="well">
-	
+            </tbody>
+        </table> 
 </div>
 
 </div>
 </div>
 
+<!--  
 <section class="our_client">
 	<hr class="soften"/>
 	<h4 class="title cntr"><span class="text">Manufactures</span></h4>
@@ -229,11 +232,13 @@ Body Section
 			<a href="#"><img alt="" src="../images/6.png"></a>
 		</div>
 	</div>
-</section>
+</section>-->
 
 <!--
 Footer
 -->
+<hr class="soften"/>
+<hr class="soften"/>
 <footer class="footer">
 <div class="row-fluid">
 <div class="span2">
@@ -261,11 +266,8 @@ Footer
 <a href="#">SUPPLIERS</a> <br/>
  </div>
  <div class="span6">
-<h5>The standard chunk of Lorem</h5>
-The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for
- those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et 
- Malorum" by Cicero are also reproduced in their exact original form, 
-accompanied by English versions from the 1914 translation by H. Rackham.
+<h5>Information about website.</h5>
+There will be some text.
  </div>
  </div>
 </footer>
@@ -292,5 +294,7 @@ accompanied by English versions from the 1914 translation by H. Rackham.
     <script src="../js/shop.js"></script>
 
 
+
 </body>
+
 </html>
