@@ -2,6 +2,7 @@ package com.RegistrationLogin.Controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -9,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.RegistrationLogin.Bean.Product;
 import com.RegistrationLogin.Bean.User;
 import com.RegistrationLogin.Model.DataProvider;
 
@@ -50,11 +52,15 @@ public class Register extends HttpServlet {
 		
 		DataProvider dp = new DataProvider();
 		dp.writeData(user);
+		Integer user_id = dp.getId(user);
+		ArrayList<Product> products = new ArrayList<Product>();
 		
 		String result = dp.readData(user);
 		if (result.equalsIgnoreCase("success")) {
 			HttpSession session = request.getSession();
 			session.setAttribute("email", email);
+			session.setAttribute("myProducts", products);
+			session.setAttribute("id", user_id);
 			response.sendRedirect("http://localhost:8080/RegistrationLogin/jsp/welcome.jsp");
 		}
 		else {

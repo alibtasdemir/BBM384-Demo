@@ -44,6 +44,7 @@ public class ProductController extends HttpServlet {
 		
 		DataProvider dp = new DataProvider();
 		dp.writeData(product);
+		
 		ArrayList<Product> products = dp.getProductsBySellerId(seller_id);
 		
 		HttpSession session = request.getSession();
