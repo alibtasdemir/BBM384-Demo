@@ -1,5 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@page import="com.RegistrationLogin.Bean.Product"%>
+<%@page import="java.util.ArrayList"%>
+<%@page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -138,9 +140,16 @@ Body Section
 		  </ul>
 		  </div>
 	<div class="span9">
-	<%String email = (String)session.getAttribute("email");Integer id = (Integer)session.getAttribute("id");%>
+	<%
+	String email = (String)session.getAttribute("email");
+	Integer id = (Integer)session.getAttribute("id");
+	ArrayList<Product> myProducts =(ArrayList<Product>)session.getAttribute("myProducts");
+	%>
 
-	<h3>Welcome <% out.println(email + "\n" + id); %></h3>
+	<h3>Welcome 
+	<% 
+	out.println(email + "\n" + id);
+	%></h3>
 	<hr class="soft"/>
 	
 	<div class="well">
@@ -169,6 +178,23 @@ Body Section
 			</div>
 		</div>
 	</form>
+	
+	<div>
+        <h4>List of products</h4>
+        <table border="1" cellpadding="5" align="center">
+            <tr>
+                <th>Name</th>
+                <th>Stock</th>
+            </tr>
+            <% for (Product product: myProducts) { %>
+                <tr>
+                    <td><%=product.getProduct_name()%></td>
+                    <td><%=product.getProduct_stock()%></td>
+                </tr>
+            <%}%>
+        </table>
+    </div>
+	
 	<button type="button" value="Logout" onclick="window.location.href = '../logout.jsp';" class="shopBtn"><span class="glyphicon glyphicon-log-out"></span> Logout</button>
 </div>
 

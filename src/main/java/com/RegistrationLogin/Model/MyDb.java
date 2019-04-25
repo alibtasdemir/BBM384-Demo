@@ -11,7 +11,7 @@ public class MyDb {
 		
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/registrationlogin", "root", "ali975baran");
+			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/registrationlogin", "root", "abd/9897");
 		} catch (ClassNotFoundException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();

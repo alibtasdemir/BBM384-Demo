@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.Date;
 
 import com.RegistrationLogin.Bean.Product;
 import com.RegistrationLogin.Bean.User;
@@ -104,6 +106,7 @@ public class DataProvider {
 			Statement stmt = con.createStatement();
 			ResultSet rs = stmt.executeQuery("select id from user where email='"+user.getEmail()+"'");
 			
+			
 			if (rs.next()) {
 				int id = rs.getInt("id");
 				return id;
@@ -116,6 +119,42 @@ public class DataProvider {
 			e.printStackTrace();
 		}
 		return -1;
+	}
+	
+	public ArrayList<Product> getProductsBySellerId(int userid) {
+		
+		MyDb db = new MyDb();
+		
+		Connection con = db.getCon();
+		
+		ArrayList<Product> products = new ArrayList<Product>();
+		
+		try {
+			Statement stmt = con.createStatement();
+			ResultSet rs = stmt.executeQuery("select * from product where seller='" + userid + "'");
+			
+
+			while (rs.next()) {
+		        int id = rs.getInt("id");
+		        String name = rs.getString("name");
+		        int stock = rs.getInt("stock");
+		        Date create_time = rs.getDate("create_time");
+		        int seller = rs.getInt("seller");
+		        
+		        Product p = new Product();
+		        p.setProduct_name(name);
+		        p.setProduct_stock(stock);
+		        p.setSeller_id(seller);
+		        
+		        products.add(p);
+		    }
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return products;
+		
 	}
 	
 }
